@@ -1,7 +1,7 @@
 <?
 class years {
 	
-		public function years ($num) {
+		public function __construct($num) {
 
 			$a = mb_strlen ($num);
 			$num = $num[$a-1];

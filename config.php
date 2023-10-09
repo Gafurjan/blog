@@ -4,9 +4,9 @@ ini_set('default_charset', 'UTF-8');
 mb_internal_encoding("UTF-8");
 
 define("HOST", "localhost");
-define("DBNAME", "myblog2");
+define("DBNAME", "myblog");
 define("DBUSER", "root");
-define("DBPASSWORD", "");
+define("DBPASSWORD", "root");
 
 //подключение через PDO
 try {
@@ -18,10 +18,17 @@ try {
 }
 
 //автозагрузка классов
-function __autoload( $className ) {
-  $className = str_replace( "..", "", $className );
-  require_once( "classes/$className.php" );
-}
+
+spl_autoload_register( function($className) {
+    $className = str_replace( "..", "", $className );
+    require_once( "classes/$className.php" );
+  });
+
+
+// function __autoload( $className ) {
+//   $className = str_replace( "..", "", $className );
+//   require_once( "classes/$className.php" );
+// }
 
 //title for site default
 $title = 'myBlog';
