@@ -207,7 +207,7 @@ class to_db2 {
 		}
 	}
 	public function getYears($year){
-		if($year[count($year)-1] > 4 && $year[mb_strlen($year)-1] < 10 || $year[mb_strlen($year)-1] == 0){
+		if($year[count(array($year))-1] > 4 && $year[mb_strlen($year)-1] < 10 || $year[mb_strlen($year)-1] == 0){
 			return $year . ' лет';
 		}elseif($year[mb_strlen($year)-1] == 1){
 			return $year . ' год';
