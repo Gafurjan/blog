@@ -17,6 +17,7 @@ class to_db2 {
                         $auts['age'][] = $this->getYears($authors2['age']);
                     }
                 return $auts;
+                
     }
 
         public function most_read ($db) {

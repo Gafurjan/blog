@@ -1,7 +1,16 @@
 <?
 class years {
+
+	public $num;
 	
 		public function __construct($num) {
+
+			$this->num = $num;
+		}
+
+
+
+		public function years($num) {
 
 			$a = mb_strlen ($num);
 			$num = $num[$a-1];
@@ -14,6 +23,7 @@ class years {
 		    	return $year = 'год';
 		    }
 		}
+
 
 		 public function count_views ($num) {
 
